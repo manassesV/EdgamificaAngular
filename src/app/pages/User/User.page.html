@@ -1,0 +1,76 @@
+<header-component></header-component>
+<div class="container">
+    <div class="col-sm-12 userlist userform">
+            <h3  *ngIf="this.userId != null" >Atualizar Usuário<span class="badge badge-secondary "></span></h3>
+            <h3 *ngIf="this.userId == null" >Criar Usuário<span class="badge badge-secondary text-center"></span></h3>
+       <hr>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="col-sm-12  Jumbotron">
+           <div class="row">
+          <div class="col-sm-6 col-md-6">
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nome:</label>
+                    <input type="text" name="name" formControlName="name" class="form-control" />
+                    <span *ngIf="userForm.controls.name.invalid
+                                && userForm.controls.name.touched" class="text-danger">
+                        Name is required.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">CPF:</label>
+                    <input type="text" name="cpf" formControlName="cpf" 
+                    class="form-control" mask="000.000.000-00" />
+                    <span *ngIf="userForm.controls.cpf.invalid
+                                && userForm.controls.cpf.touched" class="text-danger">
+                        CPF is required.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email:</label>
+                    <input type="text" name="email" formControlName="email" class="form-control" />
+                    <span *ngIf="userForm.controls.email.invalid
+                                && userForm.controls.email.touched" class="text-danger">
+                        Email is required.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">CEP:</label>
+                    <input type="tel" name="cep" formControlName="cep" class="form-control"
+                    mask="00000-000" />
+                    <span *ngIf="userForm.controls.cep.invalid
+                                && userForm.controls.cep.touched" class="text-danger"
+                                >
+                        CEP is required.
+                    </span><br>
+                </div>
+
+              
+
+        </div>
+        <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Endereço:</label>
+                    <input type="text" name="endereco" formControlName="endereco" class="form-control" />
+                    <span *ngIf="userForm.controls.endereco.invalid
+                                && userForm.controls.endereco.touched" class="text-danger">
+                        Adress is required.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Complemento:</label>
+                    <input type="text" name="complemento" formControlName="complemento" class="form-control" />
+                    <span *ngIf="userForm.controls.complemento.invalid
+                                && userForm.controls.complemento.touched" class="text-danger">
+                        Complement is required.
+                    </span><br>
+                </div>
+        </div>
+    </div> 
+    <button type="submit" class="btn btn-primary"  [disabled]="!userForm.valid">
+        <span *ngIf="this.userId != null">Atualizar <i class="glyphicon glyphicon-floppy-save"></i></span>
+        <span *ngIf="this.userId == null">Salvar<i class="glyphicon glyphicon-floppy-save"></i></span>
+    </button>
+    </form>
+    </div>
+
+</div>

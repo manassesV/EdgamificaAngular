@@ -1,0 +1,25 @@
+.centered{
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.userlist{
+    margin-top: 20px!important;
+}
+
+.remove{
+    color: #fff!important;
+}
+
+.marginmenu{
+    margin: 20px;
+
+}
+
+.userform{
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 40px!important;
+}

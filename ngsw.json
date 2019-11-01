@@ -1,0 +1,66 @@
+{
+  "configVersion": 1,
+  "timestamp": 1567389822793,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "user",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/index.html",
+        "/main-es2015.20d55fb27e5f3d097662.js",
+        "/main-es5.223819c3f393c34ee580.js",
+        "/polyfills-es2015.e954256595c973372414.js",
+        "/polyfills-es5.405730e5ac8f727bd7d7.js",
+        "/runtime-es2015.858f8dd898b75fe86926.js",
+        "/runtime-es5.741402d1d47331ce975c.js",
+        "/styles.2a5092f6c102a94c3578.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-72x72.png",
+        "/assets/projetos",
+        "/assets/user.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-72x72.png": "4e354a5e2baf2f5d3f055529561fed9536cb037b",
+    "/assets/projetos": "7185aa7f0d38f0b29adb7f8aa331263fe80acf1a",
+    "/assets/user.png": "e5dfecab97878c69d7f1bfe485bb621377261464",
+    "/index.html": "4b3a045c702e97c3b46dcaa38fda69e487b28b6d",
+    "/main-es2015.20d55fb27e5f3d097662.js": "75e4466058fd90fd68c56663e9d59ff8a6e88efa",
+    "/main-es5.223819c3f393c34ee580.js": "1bd0fd94ba1ac0d3e759645904510f55868904b5",
+    "/polyfills-es2015.e954256595c973372414.js": "ae2d1da695b0816436f21ff43f857a42b11a4e17",
+    "/polyfills-es5.405730e5ac8f727bd7d7.js": "042d7744ef82a64c73310f1db253736731a03950",
+    "/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/runtime-es5.741402d1d47331ce975c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.2a5092f6c102a94c3578.css": "ec295d5a467677adadf61201b4200cc465f90e9c"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

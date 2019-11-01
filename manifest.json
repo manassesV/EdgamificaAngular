@@ -1,0 +1,23 @@
+{
+  "dir": "ltr",
+  "lang": "pt-br",
+  "name": "User",
+  "short_name": "projeto",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": ".",
+  "theme_color": "#025c75",
+  "background_color": "#ffffff",
+  "description": "minha app etc",
+  "orientation": "portrait",
+  "prefer_related_applications": false,  
+  "icons": [
+    {
+      "src": "assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+
+  ],
+  "splash_pages": null
+}

@@ -1,0 +1,54 @@
+<header-component></header-component>
+<div class="container">
+
+    <div class="col-sm-12 userlist userform">
+        <h3>Listar Usuário<span class="badge badge-secondary"></span></h3>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group row userlist">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Pesquisa:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="nome" (keyup)="search($event)">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-1 userlist">
+                <a  ion-button block type="button" class="btn btn-primary remove"
+                (click)="orderUserDesc()">Ancedente</a>
+            </div>
+            <div class="col-sm-1 userlist">
+                    <a  ion-button block type="button" class="btn btn-primary remove"
+                    (click)="orderUserAsc()">Decrecente</a>
+                </div>
+        </div>
+
+        <table class="table margin">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Complemento</th>
+                    <th scope="col">Alterar</th>
+                    <th scope="col">Remover</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let x of array | filterUser: filterUser | orderUser: orderUser" class="table table-striped">
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.cpf }}</td>
+                    <td>{{ x.email }}</td>
+                    <td>{{ x.cep }}</td>
+                    <td>{{ x.endereco }}</td>
+                    <td>{{ x.complemento }}</td>
+                    <td><a [routerLink]="['/user', x.id]" class="btn btn-primary">Atualizar</a></td>
+                    <td><a (click)="remove(x.value)" class="btn btn-primary remove">Remover</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

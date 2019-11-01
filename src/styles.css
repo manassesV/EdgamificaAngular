@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    background-image: url("./assets/fundo.jpg")!important;
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+.margin{
+    margin-top: 25px;
+}
+

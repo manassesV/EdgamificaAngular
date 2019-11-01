@@ -1,0 +1,55 @@
+<div class="container-fluid">
+        <div class="row">
+            </div>
+            <div class="row margintop">
+        <div class="col-sm-4 col-md-4">
+                <img src="../../../assets/edgamifica.png" class="img"/>
+        </div>
+        <div class="col-sm-4 col-md-4 ">
+            <div class="jumbotron login">
+                <h4>Cadastrar-se</h4>
+                <hr/>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email:</label>
+                    <input type="text" name="email" formControlName="email"
+                     class="form-control" placeholder="Informe o email" />
+                    <span *ngIf="userForm.controls.email.invalid
+                                && userForm.controls.email.touched" class="text-danger">
+                        Email é requerido.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Senha:</label>
+                    <input type="password" name="senha" formControlName="password" 
+                    class="form-control" value="" placeholder="Informe a senha"/>
+                    <span *ngIf="userForm.controls.password.invalid
+                                && userForm.controls.password.touched" class="text-danger">
+                       Senha é requerida.
+                    </span><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Confirme Senha:</label>
+                    <input type="password" name="confsenha" formControlName="passwordConfirm" 
+                    class="form-control" value="" placeholder="Confirme a senha"/>
+                    <span *ngIf="userForm.controls.passwordConfirm.invalid
+                                && userForm.controls.passwordConfirm.touched" class="text-danger">
+                      Confirme senha é requerido.
+                    </span><br>
+                </div>
+
+                <button class="btn buttonl" ngbButtonLabel type="submit" >
+                    <span >Cadastrar-Se</span>
+                </button>
+                <a class="btn  buttonl" ngbButtonLabel (click)="login()">
+                    <span >Voltar para o acesso</span>
+                </a>
+            </form>
+        </div>
+    </div>
+        <div class="col-sm-4 col-md-4">
+                <img src="../../../assets/activies.png" class="img"/>
+        </div>
+    </div>
+
+</div>
